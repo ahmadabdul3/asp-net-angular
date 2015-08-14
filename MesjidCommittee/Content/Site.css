@@ -281,10 +281,10 @@ select {
     border-left: 1px solid #ccc;
 }
 
-.add-activity-content {
+/*.add-activity-content {
     display: none;
 }
 
 .children-row:hover .add-activity-list .add-activity-content {
     display: block;
-}
+}*/
