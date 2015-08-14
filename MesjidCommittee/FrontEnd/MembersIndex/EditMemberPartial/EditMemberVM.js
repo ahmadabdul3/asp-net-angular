@@ -1,10 +1,10 @@
 ﻿angular.module("mesjidApp")
     .controller('EditMemberVM', EditMemberVM);
 
-EditMemberVM.$inject = ['HttpService', 'HttpUrls', 'CommunityMemberService', 'ChildService',
+EditMemberVM.$inject = ['HttpService', 'HttpUrls', 'CommunityMemberService', 'ChildService', 'MemberChildrenService',
     'CommunityMembersListService', 'CommunityActivitiesService'];
 
-function EditMemberVM(HttpService, HttpUrls, CommunityMemberService, ChildService,
+function EditMemberVM(HttpService, HttpUrls, CommunityMemberService, ChildService, MemberChildrenService,
     CommunityMembersListService, CommunityActivitiesService) {
     var vm = this;
 
@@ -12,12 +12,12 @@ function EditMemberVM(HttpService, HttpUrls, CommunityMemberService, ChildServic
     vm.communityMemberActivities = CommunityActivitiesService.getCommunityActivities();
     vm.child = ChildService.getChild();
     vm.activityName = '';
-    vm.memberChildren = ChildService.getMemberChildren();
+    vm.memberChildren = MemberChildrenService.getMemberChildren();
 
     vm.clearMemberData = function (clearChildList) {
         CommunityMemberService.clearCommunityMemberData();
         ChildService.clearChildData();
-        ChildService.clearMemberChildren();
+        MemberChildrenService.clearMemberChildren();
     }
 
     vm.updateMember = function () {
@@ -38,7 +38,7 @@ function EditMemberVM(HttpService, HttpUrls, CommunityMemberService, ChildServic
                 if (data.status.indexOf('Error:') > -1) {
                     showError(data.message);
                 } else {
-                    ChildService.addToMemberChildren(data.data);
+                    MemberChildrenService.addToMemberChildren(data.data);
                     ChildService.clearChildData();
                 }
             }, HttpService.handleHttpError);
@@ -49,7 +49,7 @@ function EditMemberVM(HttpService, HttpUrls, CommunityMemberService, ChildServic
                 if (data.status.indexOf('Error:') > -1) {
                     showError(data.message);
                 } else {
-                    ChildService.memberChildrenSetAtIndex(indexInArray, data.data);
+                    MemberChildrenService.memberChildrenSetAtIndex(indexInArray, data.data);
                 }
             }, HttpService.handleHttpError);
     };

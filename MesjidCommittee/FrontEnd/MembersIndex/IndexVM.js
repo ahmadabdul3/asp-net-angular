@@ -1,10 +1,10 @@
 ﻿angular.module("mesjidApp", [])
     .controller('mesjidIndexVM', mesjidIndexVM);
 
-mesjidIndexVM.$inject = ['HttpService', 'HttpUrls', 'ChildService', 'CommunityMemberService',
+mesjidIndexVM.$inject = ['HttpService', 'HttpUrls', 'ChildService', 'CommunityMemberService', 'MemberChildrenService',
     'CommunityActivitiesService', 'CommunityMembersListService'];
 
-function mesjidIndexVM(HttpService, HttpUrls, ChildService, CommunityMemberService,
+function mesjidIndexVM(HttpService, HttpUrls, ChildService, CommunityMemberService, MemberChildrenService,
     CommunityActivitiesService, CommunityMembersListService) {
 
     var vm = this;
@@ -31,7 +31,7 @@ function mesjidIndexVM(HttpService, HttpUrls, ChildService, CommunityMemberServi
             } else {
                 CommunityMembersListService.setMembersListIndex(indexInArray);
                 CommunityMemberService.setCommunityMember(data.data);
-                ChildService.setMemberChildren(data.data.Children);
+                MemberChildrenService.setMemberChildren(data.data.Children);
                 ChildService.child.setCommunityMemberId(memberId);
                 showEditMemberPartial();
             }

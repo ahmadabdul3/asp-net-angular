@@ -237,6 +237,7 @@
     <Content Include="FrontEnd\Objects\Child.js" />
     <Content Include="FrontEnd\Objects\CommunityActivities.js" />
     <Content Include="FrontEnd\Objects\CommunityMembersList.js" />
+    <Content Include="FrontEnd\Objects\MemberChildren.js" />
     <Content Include="FrontEnd\Utils\HttpUrls.js" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
