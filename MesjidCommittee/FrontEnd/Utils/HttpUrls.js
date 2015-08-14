@@ -11,6 +11,7 @@ function HttpUrls() {
     var addChildUrl = 'Members/AddChild';
     var addMemberUrl = "/Members/AddMember";
     var deleteMemberUrl = "/Members/DeleteMember";
+    var deleteChildUrl = "/Members/DeleteChild";
 
     return {
         getMembersListUrl: getMembersListUrl,
@@ -20,6 +21,7 @@ function HttpUrls() {
         updateMemberUrl: updateMemberUrl,
         addChildUrl: addChildUrl,
         addMemberUrl: addMemberUrl,
-        deleteMemberUrl: deleteMemberUrl
+        deleteMemberUrl: deleteMemberUrl,
+        deleteChildUrl: deleteChildUrl
     }
 }

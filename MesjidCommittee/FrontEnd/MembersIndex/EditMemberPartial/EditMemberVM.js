@@ -16,7 +16,7 @@ function EditMemberVM(HttpService, HttpUrls, CommunityMemberService, ChildServic
 
     vm.clearMemberData = function (clearChildList) {
         CommunityMemberService.clearCommunityMemberData();
-        ChildService.clearChildData();
+        ChildService.clearAllChildData();
         MemberChildrenService.clearMemberChildren();
     }
 
@@ -39,7 +39,7 @@ function EditMemberVM(HttpService, HttpUrls, CommunityMemberService, ChildServic
                     showError(data.message);
                 } else {
                     MemberChildrenService.addToMemberChildren(data.data);
-                    ChildService.clearChildData();
+                    ChildService.clearChildNameData();
                 }
             }, HttpService.handleHttpError);
     }
@@ -53,5 +53,16 @@ function EditMemberVM(HttpService, HttpUrls, CommunityMemberService, ChildServic
                 }
             }, HttpService.handleHttpError);
     };
+    vm.deleteChild = function (id) {
+        HttpService.httpWithParams(HttpUrls.deleteChildUrl, HttpService.postMethod, { id: id })
+        .then(function (data) {
+            if (data.status.indexOf('Error:') > -1) {
+                showError(data.message);
+            } else {
+                MemberChildrenService.clearMemberChildren();
+                MemberChildrenService.setMemberChildren(data.data);
+            }
+        }, HttpService.handleHttpError);
+    }
 
 }

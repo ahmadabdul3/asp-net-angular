@@ -39,10 +39,13 @@ namespace MesjidCommittee.ViewModels
             if (getNestedListData)
             {
                 this.Children = new List<ChildVm>();
-                foreach (var child in cm.Children)
+                if (cm.Children != null && cm.Children.Count() > 0)
                 {
-                    ChildVm cvm = new ChildVm(child, true);
-                    this.Children.Add(cvm);
+                    foreach (var child in cm.Children)
+                    {
+                        ChildVm cvm = new ChildVm(child, true);
+                        this.Children.Add(cvm);
+                    }
                 }
             }
         }
@@ -118,10 +121,13 @@ namespace MesjidCommittee.ViewModels
             CommunityActivities = new List<CommunityActivityVm>();
             if (getNestedListData)
             {
-                foreach (var activity in child.CommunityActivities)
+                if (child.CommunityActivities != null && child.CommunityActivities.Count() > 0)
                 {
-                    CommunityActivityVm cavm = new CommunityActivityVm(activity);
-                    CommunityActivities.Add(cavm);
+                    foreach (var activity in child.CommunityActivities)
+                    {
+                        CommunityActivityVm cavm = new CommunityActivityVm(activity);
+                        CommunityActivities.Add(cavm);
+                    }
                 }
             }
         }

@@ -34,7 +34,7 @@ function HttpService($http, $q) {
             );
         },
         handleHttpError: function (error) {
-            console.error(error);
+            console.log(error);
         }
         
 

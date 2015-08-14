@@ -77,8 +77,7 @@ namespace MesjidCommittee.Controllers
         {
             try
             {
-                membersRepo.DeleteMember(id);
-                return RedirectToAction("getMembersList");
+                return Json(membersRepo.DeleteMember(id));
             }
             catch (Exception e)
             {
@@ -86,29 +85,17 @@ namespace MesjidCommittee.Controllers
             }
         }
 
-        //public ActionResult Delete(int id = 0)
-        //{
-        //    CommunityMember communitymember = db.Member.Find(id);
-        //    if (communitymember == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(communitymember);
-        //}
-
-        //[HttpPost, ActionName("Delete")]
-        //public ActionResult DeleteConfirmed(int id)
-        //{
-        //    CommunityMember communitymember = db.Member.Find(id);
-        //    db.Member.Remove(communitymember);
-        //    db.SaveChanges();
-        //    return RedirectToAction("Index");
-        //}
-
-        //protected override void Dispose(bool disposing)
-        //{
-        //    db.Dispose();
-        //    base.Dispose(disposing);
-        //}
+        [HttpPost]
+        public ActionResult DeleteChild(int id)
+        {
+            try
+            {
+                return Json(membersRepo.DeleteChild(id));
+            }
+            catch (Exception e)
+            {
+                return Json(ErrorMessages.getErrorGenericServerResponse());
+            }
+        }
     }
 }

@@ -21,13 +21,15 @@ namespace MesjidCommittee.Repositories
             List<CommunityMemberVm> cmvmList = new List<CommunityMemberVm>();
             try
             {
-                var members = db.Member.OrderBy(x => x.FirstName).ToList();
-                foreach (var m in members)
+                var members = db.Member.OrderBy(x => x.FirstName);
+                if (members != null && members.Count() > 0)
                 {
-                    CommunityMemberVm cmvm = new CommunityMemberVm(m, false);
-                    cmvmList.Add(cmvm);
+                    foreach (var m in members)
+                    {
+                        CommunityMemberVm cmvm = new CommunityMemberVm(m, false);
+                        cmvmList.Add(cmvm);
+                    }
                 }
-
                 return new ServerResponse<string, string, List<CommunityMemberVm>>(ErrorMessages.SuccessString, null, cmvmList);
             }
             catch (Exception e)
@@ -106,6 +108,26 @@ namespace MesjidCommittee.Repositories
                 return new ServerResponse<string, string, ChildVm>(ErrorMessages.ErrorString, ErrorMessages.ErrMsg_Generic, null);
             }
         }
+        public ServerResponse<string, string, List<ChildVm>> getChildrenList(int id)
+        {
+            try
+            {
+                var childrenList = db.Child.Where(x => x.CommunityMemberId == id);
+                List<ChildVm> childrenVmList = new List<ChildVm>();
+                if (childrenList != null && childrenList.Count() > 0)
+                {
+                    foreach (var child in childrenList)
+                    {
+                        childrenVmList.Add(new ChildVm(child, true));
+                    }
+                }
+                return new ServerResponse<string, string, List<ChildVm>>(ErrorMessages.SuccessString, "", childrenVmList);
+            }
+            catch (Exception e)
+            {
+                return new ServerResponse<string, string, List<ChildVm>>(ErrorMessages.ErrorString, ErrorMessages.ErrMsg_Generic, null);
+            }
+        }
 
         public ServerResponse<string, string, string[]> GetCommunityActivitiesList()
         {
@@ -119,28 +141,62 @@ namespace MesjidCommittee.Repositories
             }
         }
 
-        public void DeleteMember(int id)
+        public ServerResponse<string, string, List<CommunityMemberVm>> DeleteMember(int id)
         {
-            CommunityMember member = db.Member.Find(id);
-            if (member != null)
+            try
             {
-                List<Child> children = db.Child.Where(x => x.CommunityMemberId == id).ToList();
-                if (children != null && children.Count() > 0)
+                CommunityMember member = db.Member.Find(id);
+                if (member != null)
                 {
-                    foreach (var child in children)
+                    List<Child> children = db.Child.Where(x => x.CommunityMemberId == id).ToList();
+                    if (children != null && children.Count() > 0)
                     {
-                        List<CommunityActivity> activities = db.Activity.Where(x => x.ChildId == child.ChildId).ToList();
-                        if (activities != null && activities.Count() > 0)
+                        foreach (var child in children)
                         {
-                            foreach (var activity in activities)
+                            List<CommunityActivity> activities = db.Activity.Where(x => x.ChildId == child.ChildId).ToList();
+                            if (activities != null && activities.Count() > 0)
                             {
-                                Remove<CommunityActivity>(activity);
+                                foreach (var activity in activities)
+                                {
+                                    Remove<CommunityActivity>(activity);
+                                }
                             }
+                            Remove<Child>(child);
                         }
-                        Remove<Child>(child);
                     }
+                    Remove<CommunityMember>(member);
                 }
-                Remove<CommunityMember>(member);
+                return getMembersList();
+            }
+            catch (Exception e)
+            {
+                return new ServerResponse<string, string, List<CommunityMemberVm>>(ErrorMessages.ErrorString, ErrorMessages.ErrMsg_Generic, null);
+            }
+        }
+
+        public ServerResponse<string, string, List<ChildVm>> DeleteChild(int id)
+        {
+            try
+            {
+                Child child = db.Child.Find(id);
+                var childMemberId = child.CommunityMemberId;
+                if (child != null)
+                {
+                    List<CommunityActivity> activities = db.Activity.Where(x => x.ChildId == child.ChildId).ToList();
+                    if (activities != null && activities.Count() > 0)
+                    {
+                        foreach (var activity in activities)
+                        {
+                            Remove<CommunityActivity>(activity);
+                        }
+                    }
+                    Remove<Child>(child);
+                }
+                return getChildrenList(childMemberId);
+            }
+            catch (Exception e)
+            {
+                return new ServerResponse<string, string, List<ChildVm>>(ErrorMessages.ErrorString, ErrorMessages.ErrMsg_Generic, null);
             }
         }
 

@@ -11,11 +11,14 @@ function ChildService() {
             this.CommunityMemberId = id;
         }
     };
-
-    function clearChildData() {
+    function clearAllChildData() {
         child.FirstName = '';
         child.LastName = '';
         child.CommunityMemberId = 0;
+    }
+    function clearChildNameData() {
+        child.FirstName = '';
+        child.LastName = '';
     }
     function setChild(childIn) {
         child.FirstName = childIn.FirstName;
@@ -29,7 +32,8 @@ function ChildService() {
     return {
         child: child,
         getChild: getChild,
-        clearChildData: clearChildData,
+        clearChildNameData: clearChildNameData,
+        clearAllChildData: clearAllChildData,
         setChild: setChild
     }
 }
