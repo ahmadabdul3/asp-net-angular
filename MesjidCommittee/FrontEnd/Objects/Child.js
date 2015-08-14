@@ -27,6 +27,7 @@ function ChildService() {
     }
 
     return {
+        child: child,
         getChild: getChild,
         clearChildData: clearChildData,
         setChild: setChild

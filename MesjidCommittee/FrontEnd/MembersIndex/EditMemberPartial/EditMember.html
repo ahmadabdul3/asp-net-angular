@@ -108,19 +108,19 @@
                 </div>
                 <div class="empty-5-px"></div> 
                 <div data-ng-repeat="child in editCtrl.memberChildren track by $index" class="children-row">
-                        <div class="col col-1-4 vert-mid">
+                        <div class="col col-1-5 vert-mid">
                             <div class="txt-left">
                                 {{child.FirstName + ' ' + child.LastName}}
                             </div>
                         </div>
-                        <div class="col col-1-4 txt-left vert-mid">
+                        <div class="col col-1-5 txt-left vert-mid">
                             <div class="">
                                 <select class="content">
                                     <option data-ng-repeat='activity in child.CommunityActivities'>{{activity.ActivityName}}</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="col col-1-4 vert-mid add-activity-list">
+                        <div class="col col-1-5 vert-mid add-activity-list">
                             <div class="add-activity-content">
                                 <select data-ng-model="editCtrl.activityName" class="content">
                                     <option data-ng-repeat="activity in editCtrl.communityMemberActivities" value='{{activity}}'>
@@ -132,6 +132,9 @@
                         <div class="col col-8-perc">
                             <div class="button" data-ng-click="editCtrl.addActivityForChild(child.ChildId, $index)">Add</div>
                         </div>
+                        <!--<div class="col col-8-perc">
+                            <div class="" data-ng-click="">Delete</div>
+                        </div>-->
                     <div class="empty-5-px"></div> 
                     <!--<div class="delete-icon col vert-mid" data-ng-click="">X</div>-->
                 </div>
