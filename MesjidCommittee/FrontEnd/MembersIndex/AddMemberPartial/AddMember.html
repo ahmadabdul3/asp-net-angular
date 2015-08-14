@@ -1,0 +1,73 @@
+﻿<div data-ng-controller="AddMemberVM as addCtrl">
+    <div class='form-row'>
+        <div class="input-label">
+            <label>First Name</label>
+        </div>
+        <input type='text' data_ng_model = "addCtrl.member.FirstName" />
+    </div>
+    <div class='form-row'>
+        <div class="input-label">
+            <label>Last Name</label>
+        </div>
+        <input type='text' data_ng_model = "addCtrl.member.LastName"/>
+    </div>
+    <div class='form-row'>
+        <div class="input-label">
+            <label>Spouse First</label>
+        </div>
+        <input type="text" data_ng_model = "addCtrl.member.SpouseFirstName" />
+    </div>
+    <div class='form-row'>
+        <div class="input-label">
+            <label>Spouse Last</label>
+        </div>
+        <input type="text" data_ng_model = "addCtrl.member.SpouseLastName" />
+    </div>
+    <div class='form-row'>
+        <div class="input-label">
+            <label>Phone Number</label>
+        </div>
+        <input type='text' data_ng_model = "addCtrl.member.PhoneNumber"/>
+    </div>
+    <div class='form-row'>
+        <div class="input-label">
+            <label>Email</label>
+        </div>
+        <input type='text' data_ng_model = "addCtrl.member.Email"/>
+    </div>
+    <div class='form-row'>
+        <div class="input-label">
+            <label>Street 1</label>
+        </div>
+        <input type='text' data_ng_model = "addCtrl.member.Street1"/>
+    </div>
+    <div class='form-row'>
+        <div class="input-label">
+            <label>Street2</label>
+        </div>
+        <input type='text' data_ng_model = "addCtrl.member.Street2"/>
+    </div>
+    <div class='form-row'>
+        <div class="input-label">
+            <label>City</label>
+        </div>
+        <input type='text' data_ng_model = "addCtrl.member.City"/>
+    </div>
+    <div class='form-row'>
+        <div class="input-label">
+            <label>State</label>
+        </div>
+        <input type='text' data_ng_Model = "addCtrl.member.State"/>
+    </div>
+    <div class='form-row'>
+        <div class="input-label">
+            <label>ZipCode</label>
+        </div>
+        <input type='text' data_ng_model = "addCtrl.member.ZipCode"/>
+    </div>
+        <div class="empty-5-px"></div>
+    <div class="form-row">
+        <div class="button" data-ng-click="addCtrl.saveMember()">Save</div>
+        <div class="link-hover-tom col vert-mid modal-closer" data-ng-click="addCtrl.clearMemberData()">Cancel</div>
+    </div>
+</div>

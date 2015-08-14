@@ -1,0 +1,125 @@
+﻿@using System.Web.Script.Serialization
+
+@{
+    ViewBag.Title = "Index";
+}
+<script src='@Url.Content("~/Scripts/customJquery/jquery.slimscroll.min.js")'></script>
+<script src='@Url.Content("~/FrontEnd/MembersIndex/IndexVM.js")'></script>
+<script src='@Url.Content("~/FrontEnd/MembersIndex/AddMemberPartial/AddMemberVM.js")'></script>
+<script src='@Url.Content("~/FrontEnd/MembersIndex/EditMemberPartial/EditMemberVM.js")'></script>
+<script src='@Url.Content("~/FrontEnd/Utils/HttpService.js")'></script>
+<script src='@Url.Content("~/FrontEnd/Utils/HttpUrls.js")'></script>
+<script src='@Url.Content("~/FrontEnd/Objects/CommunityMembersList.js")'></script>
+<script src='@Url.Content("~/FrontEnd/Objects/CommunityMember.js")'></script>
+<script src='@Url.Content("~/FrontEnd/Objects/Child.js")'></script>
+<script src='@Url.Content("~/FrontEnd/Objects/CommunityActivities.js")'></script>
+
+
+<script src='@Url.Content("~/FrontEnd/MembersIndex/js-jquery/MembersIndex.js")'></script>
+
+<div id="adata-ngular-controller" data-ng-app="mesjidApp" data-ng-controller="mesjidIndexVM as mesjidIndexCtrl" data-ng-init="mesjidIndexCtrl.getMembersList()" class="txt-center">
+    <div id="index-inner-box" class="content">
+        <h2>Community Members</h2>
+        <div class="empty-space-20"></div>
+        <div class="">
+            <div class="txt-center">
+                <div class="col col-1-4">
+                    <div class="button" data-ng-click='mesjidIndexCtrl.showAddMemberPartial()'>Add member</div>
+                </div>
+                <div class="col vert-mid">Search</div>
+                <input type="text" class="col vert-mid" data-ng-model="mesjidIndexCtrl.searchText" />
+            </div>
+            <div class="empty-space-20"></div>
+            <div class="txt-center">
+                <div class="header-row">
+                    <div class="col col-1-5">
+                        <div class="content txt-left">
+                            <p>Name</p>
+                        </div>
+                    </div>
+                    <div class="col col-1-5">
+                        <div class="content txt-left">
+                            <p>Spouse</p>
+                        </div>
+                    </div>
+                    <div class="col col-1-5">
+                        <div class="content txt-left">
+                            <p>Phone</p>
+                        </div>
+                    </div>
+                    <div class="col col-1-5">
+                        <div class="content txt-left">
+                            <p>Email</p>
+                        </div>
+                    </div>
+                    <div class="col col-1-5"></div>
+
+                </div>
+                <div id="table-height">
+                    <div data-ng-repeat="member in mesjidIndexCtrl.membersList | filter:mesjidIndexCtrl.searchText track by $index "
+                        data-ng-class="'row-bg-' + ($index % 2)">
+                        <div class="row table-row-inner-box">
+                            <div class="col col-1-5 txt-left">
+                                <div class="content">
+                                    <p class='link-hover-teal' data-ng-click='mesjidIndexCtrl.prepareMemberForEdit(member.CommunityMemberId, $index)'>
+                                        {{ member.FullName }}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col col-1-5 txt-left">
+                                <div class="content">
+                                    <p class="">
+                                        {{ member.SpouseFullName }}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col col-1-5 txt-left">
+                                <div class="content">
+                                    <p class="">
+                                        {{ member.PhoneNumber }}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col col-1-5 txt-left">
+                                <div class="content">
+                                    <p class="">
+                                        {{ member.Email}}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col col-1-5">
+                                <div class="content">
+                                    <div class="link-hover-tom" data-ng-click='mesjidIndexCtrl.deleteMember(member.CommunityMemberId)'>Delete</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="empty-space-20"></div>
+        </div>
+    </div>
+
+    <div class="modal-bg hidden"></div>
+
+    <div class="add-member-modal hidden">
+        <div id="add-member-div" class="" data-ng-include="'FrontEnd/MembersIndex/AddMemberPartial/AddMember.html'">
+                
+        </div>
+        <div class="vert-mid-hack"></div>
+    </div>
+
+    <div id="edit-member-modal" class="hidden">
+        <div id="edit-member-div" class="" data-ng-include="'FrontEnd/MembersIndex/EditMemberPartial/EditMember.html'">
+                
+        </div>
+        <div class="vert-mid-hack"></div>
+    </div>
+
+</div>
+<div id="error-modal" class="hidden">
+    <div id="error-modal-message">
+
+    </div>
+</div>
+

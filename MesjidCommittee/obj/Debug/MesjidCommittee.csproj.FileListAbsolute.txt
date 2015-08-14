@@ -1,0 +1,75 @@
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\MesjidCommittee.dll
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\MesjidCommittee.pdb
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\Antlr3.Runtime.dll
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\EntityFramework.dll
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\Microsoft.Web.Infrastructure.dll
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\Newtonsoft.Json.dll
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\System.Net.Http.Formatting.dll
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\System.Web.Helpers.dll
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\System.Web.Http.dll
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\System.Web.Http.WebHost.dll
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\System.Web.Mvc.dll
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\System.Web.Optimization.dll
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\System.Web.Razor.dll
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\System.Web.WebPages.Deployment.dll
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\System.Web.WebPages.dll
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\System.Web.WebPages.Razor.dll
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\WebGrease.dll
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\EntityFramework.xml
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\Newtonsoft.Json.xml
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\System.Net.Http.Formatting.xml
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\System.Web.Helpers.xml
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\System.Web.Http.xml
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\System.Web.Http.WebHost.xml
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\System.Web.Mvc.xml
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\System.Web.Razor.xml
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\System.Web.WebPages.xml
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\System.Web.WebPages.Deployment.xml
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\bin\System.Web.WebPages.Razor.xml
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.csprojResolveAssemblyReference.cache
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.dll
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.pdb
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.Migrations.initialmigration.resources
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.csproj.GenerateResource.Cache
+c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.Migrations.updatedmodelwithphoneandemail.resources
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\MesjidCommittee.dll
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\MesjidCommittee.pdb
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\Antlr3.Runtime.dll
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\EntityFramework.dll
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\Newtonsoft.Json.dll
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Net.Http.Formatting.dll
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.Helpers.dll
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.Http.dll
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.Http.WebHost.dll
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.Mvc.dll
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.Optimization.dll
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.Razor.dll
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.WebPages.dll
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.WebPages.Razor.dll
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\WebGrease.dll
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\EntityFramework.xml
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\Newtonsoft.Json.xml
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Net.Http.Formatting.xml
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.Helpers.xml
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.Http.xml
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.Http.WebHost.xml
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.Mvc.xml
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.Razor.xml
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.WebPages.xml
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.WebPages.Razor.xml
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.Migrations.InitialCreate.resources
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommitteeOld.Migrations.initialmigration.resources
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommitteeOld.Migrations.updatedmodelwithphoneandemail.resources
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommitteeOld.Migrations.madeDOBoptionalandupdatedcitywithcapitalfirstletter.resources
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommitteeOld.Migrations.addedfullnamefieldtomembermodel.resources
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommitteeOld.Migrations.addedcommunityactivitieslists.resources
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommitteeOld.Migrations.addedrequiredtophoneandemail.resources
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommitteeOld.Migrations.addedChildrenAndSpouse.resources
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommitteeOld.Migrations.childTableNowHasActivities.resources
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.csproj.GenerateResource.Cache
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.dll
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.pdb
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.csprojResolveAssemblyReference.cache
