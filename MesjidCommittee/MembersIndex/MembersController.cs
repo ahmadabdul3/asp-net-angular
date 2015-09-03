@@ -9,6 +9,7 @@ using MesjidCommittee.Models;
 using MesjidCommittee.ViewModels;
 using MesjidCommittee.DAL;
 using MesjidCommittee.Helpers;
+using MesjidCommittee.Helpers.ServerResponse;
 using MesjidCommittee.Repositories;
 
 namespace MesjidCommittee.Controllers
@@ -65,6 +66,11 @@ namespace MesjidCommittee.Controllers
         public ActionResult AddActivity(int Id, string ActivityName)
         {
             return Json(membersRepo.AddActivity(Id, ActivityName));
+        }
+        [HttpPost]
+        public ActionResult DeleteActivity(int id)
+        {
+            return Json(membersRepo.DeleteActivity(id));
         }
 
         public ActionResult GetCommunityActivitiesList()

@@ -55,6 +55,7 @@ namespace MesjidCommittee.Models
     {
         public int CommunityActivityId { get; set; }
         public string ActivityName { get; set; }
+        
 
         public int ChildId { get; set; }
         [ForeignKey("ChildId")]
@@ -65,6 +66,7 @@ namespace MesjidCommittee.Models
         public int ChildId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public DateTime? DateOfBirth { get; set; }
         public virtual ICollection<CommunityActivity> CommunityActivities { get; set; }
 
         public int CommunityMemberId { get; set; }

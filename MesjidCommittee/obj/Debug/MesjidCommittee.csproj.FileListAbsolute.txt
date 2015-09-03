@@ -61,14 +61,7 @@ C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.WebPages.xm
 C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.WebPages.Deployment.xml
 C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.WebPages.Razor.xml
 C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.Migrations.InitialCreate.resources
-C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommitteeOld.Migrations.initialmigration.resources
-C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommitteeOld.Migrations.updatedmodelwithphoneandemail.resources
-C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommitteeOld.Migrations.madeDOBoptionalandupdatedcitywithcapitalfirstletter.resources
-C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommitteeOld.Migrations.addedfullnamefieldtomembermodel.resources
-C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommitteeOld.Migrations.addedcommunityactivitieslists.resources
-C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommitteeOld.Migrations.addedrequiredtophoneandemail.resources
-C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommitteeOld.Migrations.addedChildrenAndSpouse.resources
-C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommitteeOld.Migrations.childTableNowHasActivities.resources
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.Migrations.addeddateofbirthpropertyforchildmodel.resources
 C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.csproj.GenerateResource.Cache
 C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.dll
 C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.pdb

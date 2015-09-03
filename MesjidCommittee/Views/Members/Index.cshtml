@@ -4,19 +4,19 @@
     ViewBag.Title = "Index";
 }
 <script src='@Url.Content("~/Scripts/customJquery/jquery.slimscroll.min.js")'></script>
-<script src='@Url.Content("~/FrontEnd/MembersIndex/IndexVM.js")'></script>
-<script src='@Url.Content("~/FrontEnd/MembersIndex/AddMemberPartial/AddMemberVM.js")'></script>
-<script src='@Url.Content("~/FrontEnd/MembersIndex/EditMemberPartial/EditMemberVM.js")'></script>
-<script src='@Url.Content("~/FrontEnd/Utils/HttpService.js")'></script>
-<script src='@Url.Content("~/FrontEnd/Utils/HttpUrls.js")'></script>
-<script src='@Url.Content("~/FrontEnd/Objects/CommunityMembersList.js")'></script>
-<script src='@Url.Content("~/FrontEnd/Objects/CommunityMember.js")'></script>
-<script src='@Url.Content("~/FrontEnd/Objects/Child.js")'></script>
-<script src='@Url.Content("~/FrontEnd/Objects/MemberChildren.js")'></script>
-<script src='@Url.Content("~/FrontEnd/Objects/CommunityActivities.js")'></script>
+<script src='@Url.Content("~/MembersIndex/FrontEnd/MembersIndex/IndexVM.js")'></script>
+<script src='@Url.Content("~/MembersIndex/FrontEnd/MembersIndex/AddMemberPartial/AddMemberVM.js")'></script>
+<script src='@Url.Content("~/MembersIndex/FrontEnd/MembersIndex/EditMemberPartial/EditMemberVM.js")'></script>
+<script src='@Url.Content("~/MembersIndex/FrontEnd/Utils/HttpService.js")'></script>
+<script src='@Url.Content("~/MembersIndex/FrontEnd/Utils/HttpUrls.js")'></script>
+<script src='@Url.Content("~/MembersIndex/FrontEnd/Services/CommunityMembersList.js")'></script>
+<script src='@Url.Content("~/MembersIndex/FrontEnd/Services/CommunityMember.js")'></script>
+<script src='@Url.Content("~/MembersIndex/FrontEnd/Services/Child.js")'></script>
+<script src='@Url.Content("~/MembersIndex/FrontEnd/Services/MemberChildren.js")'></script>
+<script src='@Url.Content("~/MembersIndex/FrontEnd/Services/CommunityActivities.js")'></script>
 
 
-<script src='@Url.Content("~/FrontEnd/MembersIndex/js-jquery/MembersIndex.js")'></script>
+<script src='@Url.Content("~/MembersIndex/FrontEnd/MembersIndex/js-jquery/MembersIndex.js")'></script>
 
 <div id="adata-ngular-controller" data-ng-app="mesjidApp" data-ng-controller="mesjidIndexVM as mesjidIndexCtrl" data-ng-init="mesjidIndexCtrl.getMembersList()" class="txt-center">
     <div id="index-inner-box" class="content">
@@ -27,7 +27,7 @@
                 <div class="col col-1-4">
                     <div class="button" data-ng-click='mesjidIndexCtrl.showAddMemberPartial()'>Add member</div>
                 </div>
-                <div class="col vert-mid">Search</div>
+                <div class="col vert-mid">Filter</div>
                 <input type="text" class="col vert-mid" data-ng-model="mesjidIndexCtrl.searchText" />
             </div>
             <div class="empty-space-20"></div>
@@ -101,17 +101,17 @@
         </div>
     </div>
 
-    <div class="modal-bg hidden"></div>
+    <div class="modal-bg hidden modal-closer"></div>
 
     <div class="add-member-modal hidden">
-        <div id="add-member-div" class="" data-ng-include="'FrontEnd/MembersIndex/AddMemberPartial/AddMember.html'">
+        <div id="add-member-div" class="" data-ng-include="'MembersIndex/FrontEnd/MembersIndex/AddMemberPartial/AddMember.html'">
                 
         </div>
         <div class="vert-mid-hack"></div>
     </div>
 
     <div id="edit-member-modal" class="hidden">
-        <div id="edit-member-div" class="" data-ng-include="'FrontEnd/MembersIndex/EditMemberPartial/EditMember.html'">
+        <div id="edit-member-div" class="" data-ng-include="'MembersIndex/FrontEnd/MembersIndex/EditMemberPartial/EditMember.html'">
                 
         </div>
         <div class="vert-mid-hack"></div>

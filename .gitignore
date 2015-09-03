@@ -70,6 +70,7 @@ NuGet.exe
 _[Ss]cripts
 *.exe
 *.dll
+*.ldf
 *.nupkg
 *.ncrunchsolution
 *.dot[Cc]over

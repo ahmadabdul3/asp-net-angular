@@ -118,6 +118,7 @@ namespace MesjidCommittee.ViewModels
             this.ChildId = child.ChildId;
             this.FirstName = child.FirstName;
             this.LastName = child.LastName;
+            this.DateOfBirth = child.DateOfBirth;
             CommunityActivities = new List<CommunityActivityVm>();
             if (getNestedListData)
             {
@@ -140,6 +141,22 @@ namespace MesjidCommittee.ViewModels
 
         [Display(Name = "Last")]
         public string LastName { get; set; }
+        public DateTime? DateOfBirth { get; set; }
+        public string DateOfBirthString
+        {
+            get
+            {
+                if (this.DateOfBirth != null)
+                {
+                    return this.DateOfBirth.Value.ToShortDateString();
+                } else {
+                    return "";
+                }
+            }
+            set
+            {
+            }
+        }
 
         public List<CommunityActivityVm> CommunityActivities { get; set; }
         public string FullName 
