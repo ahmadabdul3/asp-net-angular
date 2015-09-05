@@ -103,5 +103,20 @@ namespace MesjidCommittee.Controllers
                 return Json(ErrorMessages.getErrorGenericServerResponse());
             }
         }
+
+        [HttpPost]
+        public ActionResult loadCsvData()
+        {
+            try
+            {
+                new CsvReader().loadCsvDataIntoDb();
+                return Json(new ServerResponse<string, string, string>(ErrorMessages.SuccessString, "success", ""));
+            }
+            catch (Exception e)
+            {
+                return Json(new ServerResponse<string, string, string>(ErrorMessages.ErrMsg_Generic, e.StackTrace, ""));
+            }
+            
+        }
     }
 }

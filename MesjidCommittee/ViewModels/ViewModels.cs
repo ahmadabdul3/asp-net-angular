@@ -14,7 +14,7 @@ namespace MesjidCommittee.ViewModels
     public class CommunityMemberVm
     {
         public CommunityMemberVm() {
-
+            this.Children = new List<ChildVm>();
         }
         public CommunityMemberVm(CommunityMember cm, bool getNestedListData)
         {
@@ -23,6 +23,7 @@ namespace MesjidCommittee.ViewModels
             LastName = cm.LastName;
             SpouseFirstName = cm.SpouseFirstName;
             SpouseLastName = cm.SpouseLastName;
+            SpousePhoneNumber = cm.SpousePhoneNumber;
             PhoneNumber = cm.PhoneNumber;
             Email = cm.Email;
             Gender = cm.Gender;
@@ -59,8 +60,9 @@ namespace MesjidCommittee.ViewModels
 
         public string SpouseFirstName { get; set; }
         public string SpouseLastName { get; set; }
+        public double? SpousePhoneNumber { get; set; }
         [Display(Name = "Phone")]
-        public int? PhoneNumber { get; set; }
+        public double? PhoneNumber { get; set; }
         [Display(Name = "Email")]
         public string Email { get; set; }
         public string Gender { get; set; }
@@ -113,12 +115,17 @@ namespace MesjidCommittee.ViewModels
     }
     public class ChildVm
     {
+        public ChildVm()
+        {
+
+        }
         public ChildVm(Child child, bool getNestedListData)
         {
             this.ChildId = child.ChildId;
             this.FirstName = child.FirstName;
             this.LastName = child.LastName;
             this.DateOfBirth = child.DateOfBirth;
+            this.Gender = child.Gender;
             CommunityActivities = new List<CommunityActivityVm>();
             if (getNestedListData)
             {
@@ -138,7 +145,7 @@ namespace MesjidCommittee.ViewModels
 
         [Display(Name = "First")]
         public string FirstName { get; set; }
-
+        public string Gender { get; set; }
         [Display(Name = "Last")]
         public string LastName { get; set; }
         public DateTime? DateOfBirth { get; set; }

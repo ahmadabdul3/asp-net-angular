@@ -65,4 +65,6 @@ C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.
 C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.csproj.GenerateResource.Cache
 C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.dll
 C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.pdb
-C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.csprojResolveAssemblyReference.cache
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.Migrations.addedgenderfieldtochildmodel.resources
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.Migrations.changedphonenumbertodouble.resources
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.Migrations.addedspousephonenumber.resources

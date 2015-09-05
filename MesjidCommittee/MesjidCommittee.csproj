@@ -125,6 +125,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="BaseRepo\BaseRepository.cs" />
+    <Compile Include="Helpers\Extentions.cs" />
     <Compile Include="Helpers\ServerResponse\ErrorMessages.cs" />
     <Compile Include="Helpers\ServerResponse\ServerResponse.cs" />
     <Compile Include="MembersIndex\MembersRepo.cs" />
@@ -141,6 +142,18 @@
     <Compile Include="Migrations\201508312301547_added dateofbirth property for child model.cs" />
     <Compile Include="Migrations\201508312301547_added dateofbirth property for child model.Designer.cs">
       <DependentUpon>201508312301547_added dateofbirth property for child model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509050016520_added gender field to child model.cs" />
+    <Compile Include="Migrations\201509050016520_added gender field to child model.Designer.cs">
+      <DependentUpon>201509050016520_added gender field to child model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509050341323_changed phone number to double.cs" />
+    <Compile Include="Migrations\201509050341323_changed phone number to double.Designer.cs">
+      <DependentUpon>201509050341323_changed phone number to double.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509050345193_added spouse phone number.cs" />
+    <Compile Include="Migrations\201509050345193_added spouse phone number.Designer.cs">
+      <DependentUpon>201509050345193_added spouse phone number.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CommunityMember.cs" />
@@ -262,6 +275,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201508312301547_added dateofbirth property for child model.resx">
       <DependentUpon>201508312301547_added dateofbirth property for child model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509050016520_added gender field to child model.resx">
+      <DependentUpon>201509050016520_added gender field to child model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509050341323_changed phone number to double.resx">
+      <DependentUpon>201509050341323_changed phone number to double.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509050345193_added spouse phone number.resx">
+      <DependentUpon>201509050345193_added spouse phone number.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

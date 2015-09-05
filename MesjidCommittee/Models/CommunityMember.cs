@@ -23,8 +23,9 @@ namespace MesjidCommittee.Models
         public string LastName { get; set; }
         public string SpouseFirstName { get; set; }
         public string SpouseLastName { get; set; }
+        public double? SpousePhoneNumber { get; set; }
         [Required(ErrorMessage = "Required")]
-        public int? PhoneNumber {get; set;}
+        public double? PhoneNumber {get; set;}
         [Required(ErrorMessage = "Required")]
         public string Email { get; set; }
         public string Gender { get; set; }
@@ -67,6 +68,7 @@ namespace MesjidCommittee.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime? DateOfBirth { get; set; }
+        public string Gender { get; set; }
         public virtual ICollection<CommunityActivity> CommunityActivities { get; set; }
 
         public int CommunityMemberId { get; set; }

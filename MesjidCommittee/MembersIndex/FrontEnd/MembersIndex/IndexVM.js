@@ -15,6 +15,15 @@ function mesjidIndexVM(HttpService, HttpUrls, ChildService, CommunityMemberServi
     vm.membersList = CommunityMembersListService.getCommunityMembersList();
     vm.activityName = '';
 
+    //vm.loadDataFromCsv = function () {
+    //    HttpService.httpWithParams("/Members/loadCsvData", HttpService.postMethod, null).then(function (data) {
+    //        if (data.status.indexOf('Error:') > -1) {
+    //            showError(data.message);
+    //        } else {
+    //            log(data.message);
+    //        }
+    //    }, HttpService.handleHttpError);
+    //};
     vm.getMembersList = function () {
         HttpService.basicGet(HttpUrls.getMembersListUrl).then(function (data) {
             if (data.status.indexOf('Error:') > -1) {
