@@ -1,9 +1,9 @@
 ﻿$(document).ready(function () {
-    $('#table-height').slimScroll({
+   /* $('.slim-scroll').slimScroll({
         height: '450px'
-    });
+    });*/
     $('.slim-scroll').slimScroll({
-        height: '200px'
+        height: '450px'
     });
 
     $(document).on('click', '.modal-closer', function () {

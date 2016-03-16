@@ -1,0 +1,82 @@
+﻿
+<script src='@Url.Content("~/MembersIndex/FrontEnd/Utils/HttpService.js")'></script>
+
+
+<div class="form-box" data-ng-app="account" data-ng-controller="loginctl as logctl">
+    <div class="form-item">
+        <label>
+            Username
+        </label>
+        <input type="text" data-ng-model="logctl.username" />
+    </div>
+    <div class="form-item">
+        <label>
+            Password
+        </label>
+        <input type="text" data-ng-model="logctl.password" />
+    </div>
+    <div class="txt-center">
+        <button class="" data-ng-click="logctl.login()">
+            Login
+        </button>
+        <button class="" data-ng-click="logctl.register()">
+            Register
+        </button>
+    </div>
+</div>
+
+<script type="text/javascript">
+    angular.module('account', ['HttpUtil'])
+    .service('loginService', loginService)
+    .controller('loginctl', loginctl);
+
+
+    loginctl.$inject = ['HttpService'];
+    function loginctl(HttpService) {
+        var self = this;
+        self.username = '';
+        self.password = '';
+        self.login = loginFunc;
+        self.register = registerFunc;
+
+        function loginFunc() {
+            var loginData = {
+                UserId: 0,
+                Username: self.username,
+                UserPassword: self.password
+            };
+            HttpService.httpWithParams("/UserAccount/Login", HttpService.postMethod, loginData).then(function (data) {
+                if (data.status.indexOf('Error:') > -1) {
+                    //showError(data.message);
+                    alert(data.message);
+                } else {
+                    console.log(data.message);
+                    location.href = '@Url.Action("Index", "Members", new {} )';
+                }
+            }, HttpService.handleHttpError);
+        }
+
+        function registerFunc() {
+            var loginData = {
+                UserId: 0,
+                Username: self.username,
+                UserPassword: self.password
+            };
+            HttpService.httpWithParams("/UserAccount/Register", HttpService.postMethod, loginData).then(function (data) {
+                if (data.status.indexOf('Error:') > -1) {
+                    //showError(data.message);
+                    alert(data.message);
+                } else {
+                    console.log(data.message);
+                    location.href = '@Url.Action("Index", "Members", new {} )';
+                }
+            }, HttpService.handleHttpError);
+        }
+    }
+    function loginService() {
+
+    }
+</script>
+
+
+

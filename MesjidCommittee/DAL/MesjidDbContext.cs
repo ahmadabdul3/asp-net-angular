@@ -17,6 +17,7 @@ namespace MesjidCommittee.DAL
         {
         }
         public DbSet<CommunityMember> Member { get; set; }
+        public DbSet<UserAccount> UserAccount { get; set; }
         public DbSet<CommunityActivity> Activity { get; set; }
         public DbSet<Child> Child { get; set; }
 
