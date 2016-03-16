@@ -32,6 +32,12 @@ c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommit
 c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.Migrations.initialmigration.resources
 c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.csproj.GenerateResource.Cache
 c:\users\abdo\documents\visual studio 2012\Projects\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.Migrations.updatedmodelwithphoneandemail.resources
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.Migrations.InitialCreate.resources
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.Migrations.addeddateofbirthpropertyforchildmodel.resources
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.Migrations.addedgenderfieldtochildmodel.resources
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.Migrations.changedphonenumbertodouble.resources
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.Migrations.addedspousephonenumber.resources
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.csproj.GenerateResource.Cache
 C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\MesjidCommittee.dll
 C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\MesjidCommittee.pdb
 C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\Antlr3.Runtime.dll
@@ -60,11 +66,7 @@ C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.Razor.xml
 C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.WebPages.xml
 C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.WebPages.Deployment.xml
 C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\bin\System.Web.WebPages.Razor.xml
-C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.Migrations.InitialCreate.resources
-C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.Migrations.addeddateofbirthpropertyforchildmodel.resources
-C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.csproj.GenerateResource.Cache
 C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.dll
 C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.pdb
-C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.Migrations.addedgenderfieldtochildmodel.resources
-C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.Migrations.changedphonenumbertodouble.resources
-C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.Migrations.addedspousephonenumber.resources
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.csprojResolveAssemblyReference.cache
+C:\Users\Abdo\Desktop\MesjidCommittee\MesjidCommittee\obj\Debug\MesjidCommittee.Migrations.addeduseraccounts.resources

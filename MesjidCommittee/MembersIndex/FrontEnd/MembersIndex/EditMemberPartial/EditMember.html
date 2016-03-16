@@ -141,8 +141,9 @@
                             <div class="col col-1-4 txt-left vert-top">
                                 <div class="">
                                     <div data-ng-repeat="activity in child.CommunityActivities track by $index" data-ng-init="activityIndex = $index">
-                                        <div class="col vert-mid">{{activity.ActivityName}}</div>
                                         <div data-ng-click="editCtrl.deleteActivity(activity.CommunityActivityId, childIndex)" class="col vert-mid delete-icon">x</div>
+                                        <div class="col vert-mid">{{activity.ActivityName}}</div>
+                                    
                                     </div>
                                 </div>
                             </div>

@@ -1,4 +1,4 @@
-﻿angular.module("mesjidApp", [])
+﻿angular.module("mesjidApp", ['HttpUtil'])
     .controller('mesjidIndexVM', mesjidIndexVM);
 /*
 validate against phone number

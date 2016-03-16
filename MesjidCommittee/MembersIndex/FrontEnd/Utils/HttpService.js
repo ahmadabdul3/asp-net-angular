@@ -1,4 +1,4 @@
-﻿angular.module("mesjidApp")
+﻿angular.module("HttpUtil", [])
 .factory('HttpService', HttpService);
 
 HttpService.$inject = ['$http', '$q'];
