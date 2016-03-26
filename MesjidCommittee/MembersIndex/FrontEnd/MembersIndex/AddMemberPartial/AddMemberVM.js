@@ -5,10 +5,11 @@ AddMemberVM.$inject = ['HttpService', 'HttpUrls', 'CommunityMemberService', 'Com
 
 function AddMemberVM(HttpService, HttpUrls, CommunityMemberService, CommunityMembersListService) {
     var vm = this;
-
+    vm.formPristineStatus = true;
     vm.member = CommunityMemberService.getCommunityMember();
 
     vm.clearMemberData = function () {
+        vm.formPristineStatus = true;
         CommunityMemberService.clearCommunityMemberData();
     }
 
@@ -17,7 +18,9 @@ function AddMemberVM(HttpService, HttpUrls, CommunityMemberService, CommunityMem
         .then(function (data) {
             if (data.status.indexOf('Error:') > -1) {
                 showError(data.message);
+                vm.formPristineStatus = false;
             } else {
+                vm.formPristineStatus = true;
                 CommunityMembersListService.addMemberToList(data.data);
                 vm.clearMemberData();
                 hideModals();

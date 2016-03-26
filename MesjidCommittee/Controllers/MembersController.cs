@@ -14,6 +14,7 @@ using MesjidCommittee.Repositories;
 
 namespace MesjidCommittee.Controllers
 {
+    [Authorize]
     public class MembersController : Controller
     {
         private MembersRepo membersRepo = new MembersRepo();

@@ -1,73 +1,108 @@
 ﻿<div data-ng-controller="AddMemberVM as addCtrl">
-    <div class='form-row'>
-        <div class="input-label">
-            <label>First Name</label>
+    <div class="txt-right pad-t-b-10">
+         <div class='circle-10 warn-bg'></div>Required Fields
+    </div>
+    <form name="addMemberForm" novalidate>
+        <div class='form-row'>
+            <div class="input-label">
+                <label>First Name</label>
+            </div>
+            <input type='text' name="firstName" data_ng_model = "addCtrl.member.FirstName" 
+                  required class="input"/>
+            <div class=""></div>
+            <div class="error-message-hidden" ng-class="{'visible':addMemberForm.firstName.$invalid && !addMemberForm.firstName.$pristine}">
+                <label class="input-label"></label>
+                <p class="error-text error-message"> Required input</p>
+            </div>
         </div>
-        <input type='text' data_ng_model = "addCtrl.member.FirstName" />
-    </div>
-    <div class='form-row'>
-        <div class="input-label">
-            <label>Last Name</label>
+        <div class='form-row'>
+            <div class="input-label">
+                <label>Last Name</label>
+            </div>
+            <input type='text' name="lastName" data_ng_model = "addCtrl.member.LastName"
+                   required class="input"/>
+            <div class=""></div>
+            <div class="error-message-hidden" ng-class="{'visible':addMemberForm.lastName.$invalid && !addMemberForm.lastName.$pristine}">
+                <label class="input-label"></label>
+                <p class="error-text error-message"> Required input</p>
+            </div>
+            
         </div>
-        <input type='text' data_ng_model = "addCtrl.member.LastName"/>
-    </div>
-    <div class='form-row'>
-        <div class="input-label">
-            <label>Spouse First</label>
+        <div class='form-row'>
+            <div class="input-label">
+                <label>Spouse First</label>
+            </div>
+            <input type="text" data_ng_model = "addCtrl.member.SpouseFirstName"  class="input"/>
+            <div class=""></div>
         </div>
-        <input type="text" data_ng_model = "addCtrl.member.SpouseFirstName" />
-    </div>
-    <div class='form-row'>
-        <div class="input-label">
-            <label>Spouse Last</label>
+        <div class='form-row'>
+            <div class="input-label">
+                <label>Spouse Last</label>
+            </div>
+            <input type="text" data_ng_model = "addCtrl.member.SpouseLastName"  class="input"/>
+            <div class=""></div>
         </div>
-        <input type="text" data_ng_model = "addCtrl.member.SpouseLastName" />
-    </div>
-    <div class='form-row'>
-        <div class="input-label">
-            <label>Phone Number</label>
+        <div class='form-row'>
+            <div class="input-label">
+                <label>Phone Number</label>
+            </div>
+            <input type='text' name="phoneNumber" data_ng_model = "addCtrl.member.PhoneNumber" required class="input"/>
+            <div class=""></div>
+            <div class="error-message-hidden" ng-class="{'visible':addMemberForm.phoneNumber.$invalid && !addMemberForm.phoneNumber.$pristine}">
+                <label class="input-label"></label>
+                <p class="error-text error-message"> Required input</p>
+            </div>
         </div>
-        <input type='text' data_ng_model = "addCtrl.member.PhoneNumber"/>
-    </div>
-    <div class='form-row'>
-        <div class="input-label">
-            <label>Email</label>
+        <div class='form-row'>
+            <div class="input-label">
+                <label>Email</label>
+            </div>
+            <input type='email' name="email" data_ng_model = "addCtrl.member.Email" required class="input"/>
+            <div class=""></div>
+            <div class="error-message-hidden" ng-class="{'visible':addMemberForm.email.$invalid && !addMemberForm.email.$pristine}">
+                <label class="input-label"></label>
+                <p class="error-text error-message"> Format: email@provider</p>
+            </div>
         </div>
-        <input type='text' data_ng_model = "addCtrl.member.Email"/>
-    </div>
-    <div class='form-row'>
-        <div class="input-label">
-            <label>Street 1</label>
+        <div class='form-row'>
+            <div class="input-label">
+                <label>Street 1</label>
+            </div>
+            <input type='text' data_ng_model = "addCtrl.member.Street1" class="input"/>
+            <div class=""></div>
         </div>
-        <input type='text' data_ng_model = "addCtrl.member.Street1"/>
-    </div>
-    <div class='form-row'>
-        <div class="input-label">
-            <label>Street2</label>
+        <div class='form-row'>
+            <div class="input-label">
+                <label>Street2</label>
+            </div>
+            <input type='text' data_ng_model = "addCtrl.member.Street2" class="input"/>
+            <div class=""></div>
         </div>
-        <input type='text' data_ng_model = "addCtrl.member.Street2"/>
-    </div>
-    <div class='form-row'>
-        <div class="input-label">
-            <label>City</label>
+        <div class='form-row'>
+            <div class="input-label">
+                <label>City</label>
+            </div>
+            <input type='text' data_ng_model = "addCtrl.member.City" class="input"/>
+            <div class=""></div>
         </div>
-        <input type='text' data_ng_model = "addCtrl.member.City"/>
-    </div>
-    <div class='form-row'>
-        <div class="input-label">
-            <label>State</label>
+        <div class='form-row'>
+            <div class="input-label">
+                <label>State</label>
+            </div>
+            <input type='text' data_ng_Model = "addCtrl.member.State" class="input"/>
+            <div class=""></div>
         </div>
-        <input type='text' data_ng_Model = "addCtrl.member.State"/>
-    </div>
-    <div class='form-row'>
-        <div class="input-label">
-            <label>ZipCode</label>
+        <div class='form-row'>
+            <div class="input-label">
+                <label>ZipCode</label>
+            </div>
+            <input type='text' data_ng_model = "addCtrl.member.ZipCode" class="input"/>
+            <div class=""></div>
         </div>
-        <input type='text' data_ng_model = "addCtrl.member.ZipCode"/>
-    </div>
-        <div class="empty-5-px"></div>
-    <div class="form-row">
-        <div class="button" data-ng-click="addCtrl.saveMember()">Save</div>
-        <div class="link-hover-tom col vert-mid modal-closer" data-ng-click="addCtrl.clearMemberData()">Cancel</div>
-    </div>
+            <div class="empty-5-px"></div>
+        <div class="form-row">
+            <button ng-disabled="addMemberForm.$invalid" data-ng-click="addCtrl.saveMember(); addMemberForm.$setPristine(addCtrl.formPristineStatus);">Save</button>
+            <div class="link-hover-tom col vert-mid modal-closer" data-ng-click="addCtrl.clearMemberData(); addMemberForm.$setPristine(addCtrl.formPristineStatus);">Cancel</div>
+        </div>
+    </form>
 </div>

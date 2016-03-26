@@ -11,6 +11,7 @@ using MesjidCommittee.DAL;
 using MesjidCommittee.Helpers;
 using MesjidCommittee.Helpers.ServerResponse;
 using MesjidCommittee.BaseRepo;
+using System.Security.Claims;
 
 namespace MesjidCommittee.Repositories
 {
@@ -18,11 +19,12 @@ namespace MesjidCommittee.Repositories
     {
         private BaseRepository baseRepo = new BaseRepository(new MesjidDbContext());
 
-        public ServerResponse<string, string, string> validateLogin(UserAccount userAccount)
+        public ServerResponse<string, string, string> validateLogin(UserAccount userAccount, HttpRequestBase request)
         {
             UserAccount existingAccount = null;
             ServerResponse<string, string, string> response =
                 new ServerResponse<string, string, string>(ErrorMessages.SuccessString, "", "");
+     
             var userAccounts = baseRepo.getDb().UserAccount.Where(x => x.Username == userAccount.Username);
 
             if (userAccounts != null && userAccounts.Count() > 0)
@@ -32,6 +34,9 @@ namespace MesjidCommittee.Repositories
                 {
                     response.status = ErrorMessages.ErrorString;
                     response.message = "Incorrect Password. Please confirm you spelled your Password correctly";
+                } else
+                {
+                    createOwinIdentity(userAccount, request);
                 }
             }
             else
@@ -42,7 +47,7 @@ namespace MesjidCommittee.Repositories
             return response;
         }
 
-        public ServerResponse<string, string, string> validateRegister(UserAccount userAccount)
+        public ServerResponse<string, string, string> validateRegister(UserAccount userAccount, HttpRequestBase request)
         {
             ServerResponse<string, string, string> response = 
                 new ServerResponse<string, string, string>(ErrorMessages.SuccessString, "", "");
@@ -58,6 +63,7 @@ namespace MesjidCommittee.Repositories
                 try
                 {
                     baseRepo.Add<UserAccount>(userAccount);
+                    createOwinIdentity(userAccount, request);
                 }
                 catch (Exception e)
                 {
@@ -68,5 +74,17 @@ namespace MesjidCommittee.Repositories
             return response;
         }
 
+        public void createOwinIdentity(UserAccount user, HttpRequestBase request)
+        {
+            var identity = new ClaimsIdentity(new[] {
+                new Claim(ClaimTypes.Name, user.Username),
+            },
+            "ApplicationCookie");
+
+            var ctx = request.GetOwinContext();
+            var authManager = ctx.Authentication;
+
+            authManager.SignIn(identity);
+        }
     }
 }

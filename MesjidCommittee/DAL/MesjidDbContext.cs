@@ -15,6 +15,7 @@ namespace MesjidCommittee.DAL
         public MesjidDbContext()
             : base("MesjidDbContext5")
         {
+            System.Diagnostics.Debug.Write(Database.Connection.ConnectionString);
         }
         public DbSet<CommunityMember> Member { get; set; }
         public DbSet<UserAccount> UserAccount { get; set; }

@@ -7,7 +7,9 @@
         <meta name="viewport" content="width=device-width" />
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/jqueryval")
-        <script src='@Url.Content("~/Scripts/angular.min.js")'></script>
+        @*<script src='@Url.Content("~/Scripts/angular.min.js")'></script>*@
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+
         @*<script src='@Url.Content("~/Scripts/angular-route.min.js")'></script>*@
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
@@ -34,17 +36,34 @@
                 </div>
             </div>
         </header>*@
-        <div id="super-body-box">
-        <div class="site-header">
-            <div class="col">
-                NHICCT
+        <div class="fixed-nav">
+            <div class="page-width">
+                <div class="item">
+                    <div class="text">
+                        NHICCT
+                    </div>
+                    <div class="vert-mid-hack"></div>
+                </div>
+                @if (Request.IsAuthenticated)
+                {
+                    <div class="item right">
+                        <div class="text">
+                            @Html.ActionLink("logout", "LogOut", "UserAccount", null, null)
+                        </div>
+                        <div class="vert-mid-hack"></div>
+                    </div>
+                }
             </div>
-
         </div>
+        <div class="empty-30-px"></div>
+        <div id="super-body-box">
+        
         <div id="body" style="">
             @RenderSection("featured", required: false)
             <section class="content-wrapper main-content clear-fix">
-                @RenderBody()
+                <div class="page-width">
+                    @RenderBody()
+                </div>
             </section>
         </div>
         

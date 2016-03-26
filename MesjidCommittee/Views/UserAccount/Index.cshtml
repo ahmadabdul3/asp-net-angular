@@ -1,30 +1,75 @@
 ﻿
 <script src='@Url.Content("~/MembersIndex/FrontEnd/Utils/HttpService.js")'></script>
 
-
-<div class="form-box" data-ng-app="account" data-ng-controller="loginctl as logctl">
-    <div class="form-item">
-        <label>
-            Username
-        </label>
-        <input type="text" data-ng-model="logctl.username" />
+<div class="login-page-box">
+    <div id="login-page-background"></div>
+    <div class="form-box" id="login-form" data-ng-app="account" data-ng-controller="loginctl as logctl">
+    
+        <form name="loginForm" novalidate>
+            <div class="form-item">
+                <label>
+                    Username
+                </label>
+                <!--ng-model-options="{ updateOn: 'blur' }"-->
+                <div class="login-form-input-box">
+                    <input type="text" name="username" data-ng-model="logctl.username"
+                           ng-class="{ 'invalid' : loginForm.username.$invalid && !loginForm.username.$pristine}"
+                           required class="login-form-input" />
+                </div>
+                <div class="error-message-hidden" ng-class="{'visible': loginForm.username.$invalid && !loginForm.username.$pristine}">
+                    <label></label>
+                    <p class="error-text error-message">Required input</p>
+                </div>
+            </div>
+            <div class="form-item">
+                <label>
+                    Password
+                </label>
+                <div class="login-form-input-box">
+                    <input type="password" name="password" data-ng-model="logctl.password"
+                           ng-class="{ 'invalid' : loginForm.password.$invalid && !loginForm.password.$pristine}"
+                           required class="login-form-input" />
+                </div>
+                <div class="error-message-hidden" ng-class="{'visible': loginForm.password.$invalid && !loginForm.password.$pristine}">
+                    <label></label>
+                    <p class="error-text error-message">Required input</p>
+                </div>
+                </div>
+            <div class="txt-center">
+                <button ng-disabled="loginForm.$invalid" class="" data-ng-click="logctl.login()">
+                    Login
+                </button>
+           
+            </div>
+        </form>
     </div>
-    <div class="form-item">
-        <label>
-            Password
-        </label>
-        <input type="text" data-ng-model="logctl.password" />
-    </div>
-    <div class="txt-center">
-        <button class="" data-ng-click="logctl.login()">
-            Login
-        </button>
-        <button class="" data-ng-click="logctl.register()">
-            Register
-        </button>
-    </div>
+    <div class="vert-mid-hack"></div>
 </div>
 
+<script type="text/javascript">
+    $(function () {
+        var pageBackground = $('#login-page-background');
+        var index = 1;
+        var pageBackgroundClass = 'login-page-background-'
+        pageBackground.attr('class', pageBackgroundClass + '1');
+
+        function updateClass() {
+            updateBackgroundClass(pageBackground, 'login-page-background-' + index);
+            index++;
+            if (index === 6) index = 1;
+        }
+        function myTimeoutFunction() {
+            updateClass();
+            setTimeout(myTimeoutFunction, 12000);
+        }
+        if(window.innerWidth > 399) {
+            myTimeoutFunction();
+        }
+    });
+    function updateBackgroundClass(element, newClass) {
+        element.attr('class', newClass);
+    }
+</script>
 <script type="text/javascript">
     angular.module('account', ['HttpUtil'])
     .service('loginService', loginService)
@@ -48,7 +93,7 @@
             HttpService.httpWithParams("/UserAccount/Login", HttpService.postMethod, loginData).then(function (data) {
                 if (data.status.indexOf('Error:') > -1) {
                     //showError(data.message);
-                    alert(data.message);
+                    confirm(data.message);
                 } else {
                     console.log(data.message);
                     location.href = '@Url.Action("Index", "Members", new {} )';

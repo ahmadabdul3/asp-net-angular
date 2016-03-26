@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,6 +41,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -124,6 +145,16 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Identity\FilterConfig.cs" />
+    <Compile Include="Identity\Startup.cs" />
+    <Compile Include="Migrations\201603200323590_added returnurl to user accounts.cs" />
+    <Compile Include="Migrations\201603200323590_added returnurl to user accounts.Designer.cs">
+      <DependentUpon>201603200323590_added returnurl to user accounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603201658451_removed extra useraccount id column.cs" />
+    <Compile Include="Migrations\201603201658451_removed extra useraccount id column.Designer.cs">
+      <DependentUpon>201603201658451_removed extra useraccount id column.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\UserAccountRepo.cs" />
     <Compile Include="Controllers\UserAccountController.cs" />
@@ -168,6 +199,13 @@
     <Compile Include="ViewModels\ViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\kaba-1.JPG" />
+    <Content Include="Content\images\kaba-2.jpg" />
+    <Content Include="Content\images\mesjid-1.jpg" />
+    <Content Include="Content\images\mesjid-2.jpg" />
+    <Content Include="Content\images\mesjid-3.jpg" />
+    <Content Include="Content\images\mesjid-4.jpg" />
+    <Content Include="Content\images\sand-wallpaper.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -234,6 +272,7 @@
     <Content Include="MembersIndex\FrontEnd\Services\MemberChildren.js" />
     <Content Include="MembersIndex\FrontEnd\Utils\HttpUrls.js" />
     <Content Include="Global.asax" />
+    <None Include="Properties\PublishProfiles\mesjid.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="MembersIndex\FrontEnd\MembersIndex\EditMemberPartial\EditMember.html" />
@@ -256,7 +295,9 @@
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="MembersIndex\FrontEnd\MembersIndex\AddMemberPartial\AddMember.html" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -294,6 +335,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603140201290_added user accounts.resx">
       <DependentUpon>201603140201290_added user accounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603200323590_added returnurl to user accounts.resx">
+      <DependentUpon>201603200323590_added returnurl to user accounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603201658451_removed extra useraccount id column.resx">
+      <DependentUpon>201603201658451_removed extra useraccount id column.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -24,40 +24,42 @@
         <div class="empty-space-20"></div>
         <div class="">
             <div class="txt-center">
-                <div class="col col-1-4">
+                <div class="col-lg">
                     <div class="button" data-ng-click='mesjidIndexCtrl.showAddMemberPartial()'>Add member</div>
                 </div>
-                <div class="col vert-mid">Filter</div>
-                <input type="text" class="col vert-mid" data-ng-model="mesjidIndexCtrl.searchText" />
+                <div class="col-lg">
+                    <div class="col vert-mid">Filter</div>
+                    <input type="text" class="input col vert-mid" data-ng-model="mesjidIndexCtrl.searchText" />
+                </div>
             </div>
         </div>
         
         <div class="table-box">
             
-            <div class="table">
+            <div class="table blue">
 
                 <div class="head">
-
+                    <div class="table-head-shadow"></div>
                     <div class="row">
-                        <div class="column">
+                        <div class="column w120">
                             <div class="text">
                                 Name
                             </div>
                             <div class="vert-mid-hack"></div>
                         </div>
-                        <div class="column">
+                        <div class="column w120">
                             <div class="text">
                                 Spouse
                             </div>
                             <div class="vert-mid-hack"></div>
                         </div>
-                        <div class="column">
+                        <div class="column w120">
                             <div class="text">
                                 Phone
                             </div>
                             <div class="vert-mid-hack"></div>
                         </div>
-                        <div class="column">
+                        <div class="column w120">
                             <div class="text">
                                 Email
                             </div>
@@ -72,37 +74,41 @@
                     </div>
 
                 </div>
-                <div class="body slim-scroll">
+                <div class="body">
 
                     <div class="row" 
                         data-ng-repeat="member in mesjidIndexCtrl.membersList | filter:mesjidIndexCtrl.searchText track by $index"
                         >
-                        <div class="column">
-                            <div class='text link-hover-teal' data-ng-click='mesjidIndexCtrl.prepareMemberForEdit(member.CommunityMemberId, $index)'>
-                                {{ member.FullName }}
+                        <div class="column w120">
+                            <div class='text' data-ng-click='mesjidIndexCtrl.prepareMemberForEdit(member.CommunityMemberId, $index)'>
+                                <label>Name: </label>
+                                <span class="link">{{ member.FullName }}</span>
                             </div>
                             <div class="vert-mid-hack"></div>
                         </div>
-                        <div class="column">
+                        <div class="column w120">
                             <div class="text">
+                                <label>Spouse: </label>
                                 {{ member.SpouseFullName }}
                             </div>
                             <div class="vert-mid-hack"></div>
                         </div>
-                        <div class="column">
+                        <div class="column w120">
                             <div class="text">
+                                <label>Phone: </label>
                                 {{ member.PhoneNumber }}
                             </div>
                             <div class="vert-mid-hack"></div>
                         </div>
-                        <div class="column">
+                        <div class="column w120">
                             <div class="text">
+                                <label>Email: </label>
                                 {{ member.Email}}
                             </div>
                             <div class="vert-mid-hack"></div>
                         </div>
                         <div class="column w50">
-                            <div class="text link-hover-tom" 
+                            <div class="text delete-link" 
                                 data-ng-click='mesjidIndexCtrl.deleteMember(member.CommunityMemberId)'>
                                 Delete
                             </div>

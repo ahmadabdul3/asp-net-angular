@@ -12,26 +12,46 @@ using MesjidCommittee.Helpers;
 using MesjidCommittee.Helpers.ServerResponse;
 using MesjidCommittee.Repositories;
 
+
 namespace MesjidCommittee.Controllers
 {
+    [AllowAnonymous]
     public class UserAccountController : Controller
     {
         private UserAccountRepo userAccountRepo = new UserAccountRepo();
-        public ActionResult Index()
+        public ActionResult Index(string returnUrl)
         {
-            return View();
+            var model = new UserAccount
+            {
+                ReturnUrl = returnUrl
+            };
+
+            return View(model);
         }
 
         [HttpPost]
         public ActionResult Login(UserAccount user)
         {
-            return Json(userAccountRepo.validateLogin(user));
+            if(!ModelState.IsValid)
+            {
+                return Json(new ServerResponse<string, string, string>(ErrorMessages.ErrorString, ErrorMessages.ErrMsg_RequiredFieldsWereEmpty, ""));
+            }
+            ServerResponse<string, string, string> response = userAccountRepo.validateLogin(user, Request);
+            return Json(response);
+        }
+        public ActionResult LogOut()
+        {
+            var ctx = Request.GetOwinContext();
+            var authManager = ctx.Authentication;
+
+            authManager.SignOut("ApplicationCookie");
+            return RedirectToAction("Index");
         }
 
         [HttpPost]
         public ActionResult Register(UserAccount user)
         {
-            return Json(userAccountRepo.validateRegister(user));
+            return Json(userAccountRepo.validateRegister(user, Request));
         }
     }
 }

@@ -28,6 +28,7 @@ function mesjidIndexVM(HttpService, HttpUrls, ChildService, CommunityMemberServi
         HttpService.basicGet(HttpUrls.getMembersListUrl).then(function (data) {
             if (data.status.indexOf('Error:') > -1) {
                 showError(data.message);
+                console.error(data.message);
             } else {
                 CommunityMembersListService.setCommunityMembersList(data.data);
                 CommunityActivitiesService.updateCommunityActivities();

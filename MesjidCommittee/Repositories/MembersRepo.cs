@@ -21,8 +21,8 @@ namespace MesjidCommittee.Repositories
         public ServerResponse<string, string, List<CommunityMemberVm>> getMembersList()
         {
             List<CommunityMemberVm> cmvmList = new List<CommunityMemberVm>();
-            try
-            {
+           try
+           {
                 var members = baseRepo.getDb().Member.OrderBy(x => x.FirstName);
                 if (members != null && members.Count() > 0)
                 {
