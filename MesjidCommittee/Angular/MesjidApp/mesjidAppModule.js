@@ -1,0 +1,1 @@
+﻿angular.module("mesjidApp", ['HttpUtil', 'ui.router']);

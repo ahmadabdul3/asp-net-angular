@@ -1,12 +1,12 @@
-﻿@using System.Web.Script.Serialization
+﻿
 
-@{
-    ViewBag.Title = "Index";
-}
 <script src='@Url.Content("~/Scripts/customJquery/jquery.slimscroll.min.js")'></script>
-<script src='@Url.Content("~/MembersIndex/FrontEnd/MembersIndex/IndexVM.js")'></script>
-<script src='@Url.Content("~/MembersIndex/FrontEnd/MembersIndex/AddMemberPartial/AddMemberVM.js")'></script>
-<script src='@Url.Content("~/MembersIndex/FrontEnd/MembersIndex/EditMemberPartial/EditMemberVM.js")'></script>
+<script src='@Url.Content("~/Angular/MesjidApp/mesjidAppModule.js")'></script>
+<script src='@Url.Content("~/Angular/MesjidApp/Modules/Members/IndexVM.js")'></script>
+<script src='@Url.Content("~/Angular/MesjidApp/Modules/AddMember/AddMemberVM.js")'></script>
+
+
+<script src='@Url.Content("~/Angular/MesjidApp/Modules/Member/EditMemberVM.js")'></script>
 <script src='@Url.Content("~/MembersIndex/FrontEnd/Utils/HttpService.js")'></script>
 <script src='@Url.Content("~/MembersIndex/FrontEnd/Utils/HttpUrls.js")'></script>
 <script src='@Url.Content("~/MembersIndex/FrontEnd/Services/CommunityMembersList.js")'></script>
@@ -14,136 +14,9 @@
 <script src='@Url.Content("~/MembersIndex/FrontEnd/Services/Child.js")'></script>
 <script src='@Url.Content("~/MembersIndex/FrontEnd/Services/MemberChildren.js")'></script>
 <script src='@Url.Content("~/MembersIndex/FrontEnd/Services/CommunityActivities.js")'></script>
-
-
 <script src='@Url.Content("~/MembersIndex/FrontEnd/MembersIndex/js-jquery/MembersIndex.js")'></script>
+<script type="text/javascript" src='@Url.Content("~/Angular/MesjidApp/Routes.js")'></script>
 
-<div id="adata-ngular-controller" data-ng-app="mesjidApp" data-ng-controller="mesjidIndexVM as mesjidIndexCtrl" data-ng-init="mesjidIndexCtrl.getMembersList()" class="txt-center">
-    <div id="index-inner-box" class="content">
-        <h2>Community Members</h2>
-        <div class="empty-space-20"></div>
-        <div class="">
-            <div class="txt-center">
-                <div class="col-lg">
-                    <div class="button" data-ng-click='mesjidIndexCtrl.showAddMemberPartial()'>Add member</div>
-                </div>
-                <div class="col-lg">
-                    <div class="col vert-mid">Filter</div>
-                    <input type="text" class="input col vert-mid" data-ng-model="mesjidIndexCtrl.searchText" />
-                </div>
-            </div>
-        </div>
-        
-        <div class="table-box">
-            
-            <div class="table blue">
-
-                <div class="head">
-                    <div class="table-head-shadow"></div>
-                    <div class="row">
-                        <div class="column w120">
-                            <div class="text">
-                                Name
-                            </div>
-                            <div class="vert-mid-hack"></div>
-                        </div>
-                        <div class="column w120">
-                            <div class="text">
-                                Spouse
-                            </div>
-                            <div class="vert-mid-hack"></div>
-                        </div>
-                        <div class="column w120">
-                            <div class="text">
-                                Phone
-                            </div>
-                            <div class="vert-mid-hack"></div>
-                        </div>
-                        <div class="column w120">
-                            <div class="text">
-                                Email
-                            </div>
-                            <div class="vert-mid-hack"></div>
-                        </div>
-                        <div class="column w50">
-                            <div class="text">
-                                -
-                            </div>
-                            <div class="vert-mid-hack"></div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="body">
-
-                    <div class="row" 
-                        data-ng-repeat="member in mesjidIndexCtrl.membersList | filter:mesjidIndexCtrl.searchText track by $index"
-                        >
-                        <div class="column w120">
-                            <div class='text' data-ng-click='mesjidIndexCtrl.prepareMemberForEdit(member.CommunityMemberId, $index)'>
-                                <label>Name: </label>
-                                <span class="link">{{ member.FullName }}</span>
-                            </div>
-                            <div class="vert-mid-hack"></div>
-                        </div>
-                        <div class="column w120">
-                            <div class="text">
-                                <label>Spouse: </label>
-                                {{ member.SpouseFullName }}
-                            </div>
-                            <div class="vert-mid-hack"></div>
-                        </div>
-                        <div class="column w120">
-                            <div class="text">
-                                <label>Phone: </label>
-                                {{ member.PhoneNumber }}
-                            </div>
-                            <div class="vert-mid-hack"></div>
-                        </div>
-                        <div class="column w120">
-                            <div class="text">
-                                <label>Email: </label>
-                                {{ member.Email}}
-                            </div>
-                            <div class="vert-mid-hack"></div>
-                        </div>
-                        <div class="column w50">
-                            <div class="text delete-link" 
-                                data-ng-click='mesjidIndexCtrl.deleteMember(member.CommunityMemberId)'>
-                                Delete
-                            </div>
-                            <div class="vert-mid-hack"></div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div><!-- end table box -->
-
-    </div>
-
-    <div class="modal-bg hidden modal-closer"></div>
-
-    <div class="add-member-modal hidden">
-        <div id="add-member-div" class="" data-ng-include="'MembersIndex/FrontEnd/MembersIndex/AddMemberPartial/AddMember.html'">
-                
-        </div>
-        <div class="vert-mid-hack"></div>
-    </div>
-
-    <div id="edit-member-modal" class="hidden">
-        <div id="edit-member-div" class="" data-ng-include="'MembersIndex/FrontEnd/MembersIndex/EditMemberPartial/EditMember.html'">
-                
-        </div>
-        <div class="vert-mid-hack"></div>
-    </div>
-
+<div data-ng-app="mesjidApp">
+    <div ui-view></div>
 </div>
-<div id="error-modal" class="hidden">
-    <div id="error-modal-message">
-
-    </div>
-</div>
-

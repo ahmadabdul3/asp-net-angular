@@ -9,7 +9,7 @@ function AddMemberVM(HttpService, HttpUrls, CommunityMemberService) {
 
     vm.clearMemberData = function () {
         CommunityMemberService.clearCommunityMemberData();
-        location.href = '/Members/Index';
+        location.href = '#/Members';
     }
 
     vm.saveMember = function () {

@@ -1,0 +1,261 @@
+﻿<div class="txt-center">
+    <h2 class="txt-left">
+        Edit Member
+    </h2>
+    <div class="txt-left">
+        <div class="link txt-left col" data-ng-click="editCtrl.clearMemberData(true)">
+            Back 
+        </div>
+    </div>
+
+    <h3 class="txt-left box-title">
+        Member Details
+    </h3>
+    <div class="col">
+        
+        <div class="horz-pad-5">
+            <div class='form-row'>
+                <div class="input-label">
+                    <label>First Name</label>
+                </div>
+                <input class='input' type='text' data-ng-model="editCtrl.member.FirstName" />
+            </div>
+            <div class='form-row'>
+                <div class="input-label">
+                    <label>Last Name</label>
+                </div>
+                <input class='input' type='text' data-ng-model="editCtrl.member.LastName" />
+            </div>
+            <div class='form-row'>
+                <div class="input-label">
+                    <label>Spouse First</label>
+                </div>
+                <input class='input' type="text" data-ng-model="editCtrl.member.SpouseFirstName" />
+            </div>
+            <div class='form-row'>
+                <div class="input-label">
+                    <label>Spouse Last</label>
+                </div>
+                <input class='input' type="text" data-ng-model="editCtrl.member.SpouseLastName" />
+            </div>
+            <div class='form-row'>
+                <div class="input-label">
+                    <label>Phone Number</label>
+                </div>
+                <input class='input' type='text' data-ng-model="editCtrl.member.PhoneNumber" />
+            </div>
+            <div class='form-row'>
+                <div class="input-label">
+                    <label>Email</label>
+                </div>
+                <input class='input' type='text' data-ng-model="editCtrl.member.Email" />
+            </div>
+            <div class='form-row'>
+                <div class="input-label">
+                    <label>Street 1</label>
+                </div>
+                <input class='input' type='text' data-ng-model="editCtrl.member.Street1" />
+            </div>
+            <div class='form-row'>
+                <div class="input-label">
+                    <label>Street2</label>
+                </div>
+                <input class='input' type='text' data-ng-model="editCtrl.member.Street2" />
+            </div>
+            <div class='form-row'>
+                <div class="input-label">
+                    <label>City</label>
+                </div>
+                <input class='input' type='text' data-ng-model="editCtrl.member.City" />
+            </div>
+            <div class='form-row'>
+                <div class="input-label">
+                    <label>State</label>
+                </div>
+                <input class='input' type='text' data-ng-model="editCtrl.member.State" />
+            </div>
+            <div class='form-row'>
+                <div class="input-label">
+                    <label>ZipCode</label>
+                </div>
+                <input class='input' type='text' data-ng-model="editCtrl.member.ZipCode" />
+            </div>
+        </div>
+        <div class="empty-5-px"></div>
+        <div class="empty-5-px"></div>
+        <div>
+            <div class="col">
+                <div class="form-row">
+                    <div class="col vert-mid">
+                        <div class="button" data-ng-click="editCtrl.updateMember()">Save</div>
+                    </div>
+                    <!--<div class="link-hover-tom col vert-mid modal-closer" data-ng-click="editCtrl.clearMemberData(true)">Cancel</div>-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="horizontal-line-eee"></div>
+    <div>
+        <h3 class="txt-left box-title">
+            Children Details
+        </h3>
+        <div class="col">
+            
+            <div class="horz-pad-5 txt-center">
+                    <div class="txt-center"><b>Add Child</b></div>
+                    <div class="empty-5-px txt-left"></div>
+                    <div class="empty-5-px"></div>
+                    <div class="col">
+                        <div class="form-row">
+                            <div class="input-label">
+                                First
+                            </div>
+                            <input class='input' type="text" data-ng-model="editCtrl.child.FirstName" />
+                        </div>
+                        <div class="form-row">
+                            <div class="input-label">
+                                Last
+                            </div>
+                            <input class='input' type="text" data-ng-model="editCtrl.child.LastName" />
+                        </div>
+                        <div class="form-row">
+                            <div class="input-label">
+                                Date Of Birth
+                            </div>
+                            <input class='input' type="date" data-ng-model="editCtrl.child.DateOfBirth" />
+                        </div>
+                        <div class="empty-5-px"></div>
+                        <div class="empty-5-px"></div>
+                        <div class="form-row txt-center">
+                            <div class="button col" data-ng-click="editCtrl.addChild()">
+                                Add
+                            </div>
+                        </div>
+                    </div>
+                <div class="empty-5-px"></div>
+                <div class="empty-5-px"></div>
+                <div class="empty-5-px"></div>
+                <div class="empty-5-px"></div>
+
+
+                <div>
+                    <div class="table-box">
+
+                        <div class="table blue">
+                            <div class="head">
+
+                                <div class="row">
+                                    <div class="column w120">
+                                        <div class="text">
+                                            Child
+                                        </div>
+                                        <div class="vert-mid-hack"></div>
+                                    </div>
+                                    <div class="column w120">
+                                        <div class="text">
+                                            DOB
+                                        </div>
+                                        <div class="vert-mid-hack"></div>
+                                    </div>
+                                    <div class="column w120">
+                                        <div class="text">
+                                            Activities
+                                        </div>
+                                        <div class="vert-mid-hack"></div>
+                                    </div>
+                                    <div class="column w120">
+                                        <div class="text">
+                                            -
+                                        </div>
+                                        <div class="vert-mid-hack"></div>
+                                    </div>
+                                    <div class="column w50">
+                                        <div class="text">
+                                            -
+                                        </div>
+                                        <div class="vert-mid-hack"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="body">
+                                <div class="table-head-shadow"></div>
+                                <div class="row"
+                                     data-ng-repeat="child in editCtrl.memberChildren track by $index" data-ng-init="childIndex = $index">
+                                    <div class="column w120">
+                                        <div class='text'>
+                                            <label>Name: </label>
+                                            {{child.FirstName + ' ' + child.LastName}}
+                                        </div>
+                                        <div class="vert-mid-hack"></div>
+                                    </div>
+                                    <div class="column w120">
+                                        <div class="text">
+                                            <label>DOB: </label>
+                                            {{child.DateOfBirthString}}
+                                        </div>
+                                        <div class="vert-mid-hack"></div>
+                                    </div>
+                                    <div class="column w120">
+                                        <div class="text">
+                                            <label>Phone: </label>
+                                            <div data-ng-repeat="activity in child.CommunityActivities track by $index" data-ng-init="activityIndex = $index">
+                                                <div data-ng-click="editCtrl.deleteActivity(activity.CommunityActivityId, childIndex)" class="col vert-mid delete-icon">x</div>
+                                                <div class="col vert-mid">{{activity.ActivityName}}</div>
+
+                                            </div>
+                                        </div>
+                                        <div class="vert-mid-hack"></div>
+                                    </div>
+                                    <div class="column w120">
+                                        <div class="text">
+                                            <div class="link-hover-teal new-activity-link">+Act</div>
+                                        </div>
+                                        <div class="vert-mid-hack"></div>
+                                    </div>
+                                    <div class="column w50">
+                                        <div class="link-hover-tom text" data-ng-click="editCtrl.deleteChild(child.ChildId)">Del</div>
+                                        <div class="vert-mid-hack"></div>
+                                    </div>
+                                    <div class="new-activity-box hidden">
+                                        <div class="col col-1-5 vert-mid add-activity-list">
+                                            <div class="add-activity-content">
+                                                <select data-ng-model="editCtrl.activityName" class="content">
+                                                    <option value="Select">Select</option>
+                                                    <option data-ng-repeat="activity in editCtrl.communityMemberActivities" value='{{activity}}'>
+                                                        {{activity}}
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col col-8-perc vert-mid">
+                                            <div class="button add-new-activity-closer" data-ng-click="editCtrl.addActivityForChild(child.ChildId, $index)">Add</div>
+                                        </div>
+                                        <div class="col col-8-perc vert-mid col-5-pad">
+                                            <div class="link-hover-tom add-new-activity-closer" data-ng-click="editCtrl.resetNewActivityValue()">Cancel</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end table box -->
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    
+</div>
+<script>
+    $(function () {
+        $(document).on('click', '.new-activity-link', function () {
+            $(this).hide();
+            $(this).parent().parent().find('.new-activity-box').show();
+        });
+        $(document).on('click', '.add-new-activity-closer', function () {
+            $(this).parent().parent().hide();
+            $(this).parent().parent().parent().find('.new-activity-link').show();
+        });
+    });
+</script>

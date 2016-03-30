@@ -199,6 +199,15 @@
     <Compile Include="ViewModels\ViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Angular\MesjidApp\mesjidAppModule.js" />
+    <Content Include="Angular\MesjidApp\Modules\AddMember\AddMemberVM.js" />
+    <Content Include="Angular\MesjidApp\Modules\AddMember\Index.html" />
+    <Content Include="Angular\MesjidApp\Modules\Members\Index.html" />
+    <Content Include="Angular\MesjidApp\Modules\Members\IndexVM.js" />
+    <Content Include="Angular\MesjidApp\Modules\Member\EditMemberVM.js" />
+    <Content Include="Angular\MesjidApp\Modules\Member\Index2.html" />
+    <Content Include="Angular\MesjidApp\Modules\Member\Index.html" />
+    <Content Include="Angular\MesjidApp\Routes.js" />
     <Content Include="Content\images\kaba-1.JPG" />
     <Content Include="Content\images\kaba-2.jpg" />
     <Content Include="Content\images\mesjid-1.jpg" />
@@ -265,6 +274,7 @@
     <Content Include="MembersIndex\FrontEnd\MembersIndex\AddMemberPartial\AddMemberVM.js" />
     <Content Include="MembersIndex\FrontEnd\MembersIndex\EditMemberPartial\EditMemberVM.js" />
     <Content Include="MembersIndex\FrontEnd\MembersIndex\js-jquery\MembersIndex.js" />
+    <Content Include="MembersIndex\FrontEnd\MembersIndex\mesjidAppModule.js" />
     <Content Include="MembersIndex\FrontEnd\Services\CommunityMember.js" />
     <Content Include="MembersIndex\FrontEnd\Services\Child.js" />
     <Content Include="MembersIndex\FrontEnd\Services\CommunityActivities.js" />
@@ -311,10 +321,13 @@
     <Content Include="Views\Web.config" />
     <Content Include="packages.config" />
     <None Include="readme.txt" />
-    <Content Include="Views\Members\Index.cshtml" />
+    <Content Include="Views\Members\Index2.cshtml" />
     <Content Include="Views\UserAccount\Index.cshtml" />
+    <Content Include="Views\Members\Add.cshtml" />
+    <Content Include="Views\Members\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Angular\Utils\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>

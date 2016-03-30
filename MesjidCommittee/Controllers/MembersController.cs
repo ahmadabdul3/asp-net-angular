@@ -23,7 +23,10 @@ namespace MesjidCommittee.Controllers
         {
             return View();
         }
-
+        public ActionResult Add()
+        {
+            return View();
+        }
         public ActionResult getMembersList()
         {
             return Json(membersRepo.getMembersList(), JsonRequestBehavior.AllowGet);

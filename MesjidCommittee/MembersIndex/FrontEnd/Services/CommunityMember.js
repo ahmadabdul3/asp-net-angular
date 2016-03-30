@@ -1,7 +1,8 @@
 ﻿angular.module("mesjidApp")
 .service('CommunityMemberService', CommunityMemberService);
 
-function CommunityMemberService() {
+CommunityMemberService.$inject = ['HttpService', 'HttpUrls', 'MemberChildrenService', 'ChildService']
+function CommunityMemberService(HttpService, HttpUrls, MemberChildrenService, ChildService) {
 
     var communityMember =  {
         CommunityMemberId : 0,
@@ -59,10 +60,23 @@ function CommunityMemberService() {
     function getCommunityMember() {
         return communityMember;
     }
+    function getCommunityMemberById(id) {
+        HttpService.httpWithParams(HttpUrls.getMemberUrl, HttpService.getMethod, { id: id })
+        .then(function (data) {
+            if (data.status.indexOf('Error:') > -1) {
+                return data.message;
+            } else {
+                setCommunityMember(data.data);
+                MemberChildrenService.setMemberChildren(data.data.Children);
+                ChildService.child.setCommunityMemberId(id);
+            }
+        }, HttpService.handleHttpError);
+    }
     return {
         communityMember: communityMember,
         getCommunityMember: getCommunityMember,
         clearCommunityMemberData: clearCommunityMemberData,
-        setCommunityMember: setCommunityMember
+        setCommunityMember: setCommunityMember,
+        getCommunityMemberById: getCommunityMemberById
     }
 }
