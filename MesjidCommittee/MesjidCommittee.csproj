@@ -215,6 +215,11 @@
     <Content Include="Content\images\mesjid-3.jpg" />
     <Content Include="Content\images\mesjid-4.jpg" />
     <Content Include="Content\images\sand-wallpaper.jpg" />
+    <Content Include="Content\loading-gifs\loading1.gif" />
+    <Content Include="Content\loading-gifs\loading2.gif" />
+    <Content Include="Content\loading-gifs\loading3.gif" />
+    <Content Include="Content\loading-gifs\loading4.gif" />
+    <Content Include="Content\loading-gifs\loading5.gif" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />

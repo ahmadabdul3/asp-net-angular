@@ -117,8 +117,14 @@ h3.box-title {
         cursor: pointer;
     }
 
+    .hidden-opacity {
+        opacity: 0;
+    }
 .hidden {
     display: none;
+}
+.overflow-hidden {
+    overflow: hidden;
 }
 /*
 input, select {

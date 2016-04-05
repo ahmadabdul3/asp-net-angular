@@ -6,6 +6,9 @@
     <div class="form-box" id="login-form" data-ng-app="account" data-ng-controller="loginctl as logctl">
     
         <form name="loginForm" novalidate>
+            <div class="form-item error-text">
+                {{logctl.loginErrorMessage}}
+            </div>
             <div class="form-item">
                 <label>
                     Username
@@ -34,13 +37,20 @@
                     <label></label>
                     <p class="error-text error-message">Required input</p>
                 </div>
-                </div>
-            <div class="txt-center">
+            </div>
+            
+            <div class="txt-center {{logctl.loginButtonVisibility}}">
                 <button ng-disabled="loginForm.$invalid" class="" data-ng-click="logctl.login()">
                     Login
                 </button>
            
             </div>
+            <div class="txt-center {{logctl.loadingGifVisibility}}" style="">
+                <div class="col">
+                    <img src="~/Content/loading-gifs/loading5.gif" width="35" height="35" />
+                </div>
+            </div>
+
         </form>
     </div>
     <div class="vert-mid-hack"></div>
@@ -83,6 +93,9 @@
         self.password = '';
         self.login = loginFunc;
         self.register = registerFunc;
+        self.loginButtonVisibility = '';
+        self.loadingGifVisibility = 'hidden';
+        self.loginErrorMessage = '';
 
         function loginFunc() {
             var loginData = {
@@ -90,11 +103,17 @@
                 Username: self.username,
                 UserPassword: self.password
             };
+            self.loginButtonVisibility = 'hidden';
+            self.loadingGifVisibility = '';
             HttpService.httpWithParams("/UserAccount/Login", HttpService.postMethod, loginData).then(function (data) {
                 if (data.status.indexOf('Error:') > -1) {
                     //showError(data.message);
-                    confirm(data.message);
+                    //confirm(data.message);
+                    self.loginErrorMessage = data.message;
+                    self.loginButtonVisibility = '';
+                    self.loadingGifVisibility = 'hidden';
                 } else {
+                    self.loginErrorMessage = '';
                     console.log(data.message);
                     location.href = '@Url.Action("Index", "Members", new {} )';
                 }
